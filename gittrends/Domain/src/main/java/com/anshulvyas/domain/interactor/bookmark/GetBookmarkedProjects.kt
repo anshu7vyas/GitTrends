@@ -12,7 +12,7 @@ class GetBookmarkedProjects @Inject constructor(
         postExecutionThread: PostExecutionThread)
     : ObservableUseCase<List<Project>, Nothing>(postExecutionThread) {
 
-    override fun buildUseCaseObservable(param: Nothing?): Observable<List<Project>> {
+    public override fun buildUseCaseObservable(param: Nothing?): Observable<List<Project>> {
         return projectsRepository.getBookmarkedProjects()
     }
 }

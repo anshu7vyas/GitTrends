@@ -21,7 +21,7 @@ class GetProjects @Inject constructor(
     : ObservableUseCase<List<Project>, Nothing>(postExecutionThread) {
 
     // no mapping of modules here, as the domain layer is the central layer
-    override fun buildUseCaseObservable(param: Nothing?): Observable<List<Project>> {
+    public override fun buildUseCaseObservable(param: Nothing?): Observable<List<Project>> {
         return projectsRepository.getProjects()
     }
 }
