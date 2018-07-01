@@ -10,7 +10,7 @@ import io.reactivex.Observable
  *
  * Actual implementation of interface will be injected from the data layer
  */
-interface ProjectRepository {
+interface ProjectsRepository {
 
     fun getProjects(): Observable<List<Project>>
 
